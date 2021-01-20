@@ -1,0 +1,71 @@
+
+@import url(//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css);
+@import url(/Thewitcher-jnOj.ttf);
+a{
+    text-decoration: none;
+}
+body, html {
+  height: 100%;
+}
+body {
+  font-family: 'Open Sans';
+  font-weight: 100;
+  display: flex;
+  overflow: hidden;
+}
+.main_page{
+    background: url(./982990.jpg)no-repeat 10% 20%;
+}
+.login_box{
+    margin: auto;
+}
+.logo{
+    font-family: 'Quicksand', sans-serif;
+    color: white;
+    text-align: center;
+    padding-bottom: 2rem;
+}
+.login-form {
+  background: rgba(34, 34, 34, 0.829);
+  box-shadow: 0 0 1rem rgba(0,0,0,0.3);
+  min-height: 10rem;
+  margin: auto;
+  max-width: 50%;
+  padding: 5rem 10rem 5rem 10rem;
+}
+
+.login-username, .login-password {
+  background: transparent;
+  border: 0px;
+  border-bottom: 1px solid white;
+  color: white;
+  display: block;
+  margin: 1rem;
+  padding: 0.5rem 1rem 0.5rem 1rem;
+  width: calc(100% - 3rem);
+}
+
+.login-submit {     
+  border: 1px solid white;
+  background: transparent;
+  color: white;
+  display: inline-flex;
+  justify-content: space-between;
+  margin: 1rem auto;
+  margin-left: 1rem;
+  min-width: 1px;
+  padding: 0.5rem 2rem 0.5rem 2rem;
+  transition: 250ms background ease-in;
+}
+.sign-in{
+    background: red;
+    border: 1px solid rgb(255, 0, 0);
+    margin-left: 3.5rem;
+}
+.login-submit:hover, .login-submit:focus {
+    background: white;
+    color: black;
+    transition: 250ms background ease-in;
+  }
+
+
