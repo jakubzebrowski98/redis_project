@@ -1,3 +1,5 @@
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -11,13 +13,11 @@
 <body class = "main_page">
     <div class="login_box">
         <form class="login-form" action="./logowanie.php" method="post">
-
             <h1 class="logo" >The Witcher</h1>
             <input type="login" name="login" class="login-username" autofocus="true" required="true" placeholder="Login" />
             <input type="password" name= "password" class="login-password" required="true" placeholder="Hasło" />
-            <a href="./home.html"><input type="submit" name="Login" value="Login" class="login-submit" /></a>
+            <a href="./home.php"><input type="submit" name="Login" value="Login" class="login-submit" /></a>
             <a href="./register_page.php"><input type="button" name="Sign in" value="Sign in" class="login-submit sign-in" /></a>
-           
         </form>
     </div>
 </body>
