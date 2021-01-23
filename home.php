@@ -5,7 +5,6 @@ require_once "./redis_server.php";
 	$drewno = $redis -> hget("$login:surowce",'drewno');
 	$kamien = $redis -> hget("$login:surowce",'kamien');
 	$zelazo = $redis -> hget("$login:surowce",'zelazo');
-
 ?>
 
 <!DOCTYPE html>
@@ -21,10 +20,10 @@ require_once "./redis_server.php";
 <body style="background: url(./zdj/982990.jpg) no-repeat 20% 20%;">
 	<div class="top-navbar">
 		<ul class="nav">
-			<li>Wioska <?php echo $_SESSION['name']?></li>
+			<li>Wioska <?php echo $_SESSION['login']?></li>
 			<li>Wiadomosci</li>
 			<li>Budowa</li>
-			<li>Ranking</li>
+			<a href="./ranking_page.php"><li class="wyloguj">Ranking</li></a>
 			<li>Profil</li>
 			<a href="./login_page.php"><li class="wyloguj">Wyloguj</li></a>
 		</ul>
