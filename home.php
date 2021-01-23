@@ -20,7 +20,7 @@ require_once "./redis_server.php";
 <body style="background: url(./zdj/982990.jpg) no-repeat 20% 20%;">
 	<div class="top-navbar">
 		<ul class="nav">
-			<li>Wioska <?php echo $_SESSION['login']?></li>
+			<a href="./home.php"class="wyloguj"><li>Wioska <?php echo $_SESSION['login']?></li></a>
 			<li>Wiadomosci</li>
 			<li>Budowa</li>
 			<a href="./ranking_page.php"><li class="wyloguj">Ranking</li></a>

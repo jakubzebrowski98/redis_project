@@ -28,7 +28,7 @@
 <body style="background: url(./zdj/982990.jpg) no-repeat 20% 20%;">
     <div class="top-navbar">
 		<ul class="nav">
-			<li>Wioska <?php echo $_SESSION['login']?></li>
+            <a href="./home.php"class="wyloguj"><li>Wioska <?php echo $_SESSION['login']?></li></a>
 			<li>Wiadomosci</li>
 			<li>Budowa</li>
 			<a href="./ranking_page.php"><li class="wyloguj">Ranking</li></a>
@@ -75,13 +75,23 @@
                         $punkty = "";
                         $rank = "";
                     }
-                    echo<<<ktory
+                    if($ktory == $rank-1){
+                        echo<<<ktory
+                                <tr>
+                                    <td style="font-weight: 900;color: #55ff00;">$rank</td>
+                                    <td class ="name" style="font-weight: 900;color: #55ff00;">$name</td>
+                                    <td style="font-weight: 900;color: #55ff00;">$punkty</td>
+                                </tr>
+                            ktory;
+                    }else{                    
+                        echo<<<ktory
                             <tr>
                                 <td>$rank</td>
                                 <td class ="name">$name</td>
                                 <td>$punkty</td>
                             </tr>
-                        ktory;
+                            ktory;
+                    }
                 }
             }
         ?>

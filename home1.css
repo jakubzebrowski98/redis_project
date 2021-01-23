@@ -63,7 +63,7 @@ body {
     align-items: center;
 }
 .wyloguj{
-    padding: 1rem 4rem;
+    padding: 2rem 4rem;
     list-style: none;
     font-family: 'Quicksand', sans-serif;
     font-size:20px;
@@ -71,7 +71,7 @@ body {
 }
 
 .nav > li{
-    padding: 1rem 4rem 1rem 4rem;
+    padding: 2rem 4rem 2rem 4rem;
     list-style: none;
     font-family: 'Quicksand', sans-serif;
     font-size:20px;
