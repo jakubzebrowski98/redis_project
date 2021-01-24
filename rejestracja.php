@@ -10,7 +10,7 @@
     if($password == $re_password){
         if($is_login == 0){
             $redis -> SADD('username', $login);
-            $redis -> HMSET($login,'email',$email,'password',$password,'punkty',0);
+            $redis -> HMSET("$login:dane",'username',$login,'email',$email,'password',$password,'punkty',0);
             $redis -> HMSET("$login:surowce",'drewno',200,'kamien',200,'zelazo',200);
             $redis -> HMSET("$login:jednostki",'miecznik',10,'pikinier',10,'zwiadowca',0,'szlachcic',0);
             $redis -> HMSET("$login:budynki",'ratusz',1,'tartak',1,'kamieniolom',1,'huta',1,'mur',0,'koszary',0,'spichlerz',0);

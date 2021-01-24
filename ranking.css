@@ -1,0 +1,105 @@
+a{
+    text-decoration: none;
+}
+body{
+    padding: 0;
+    margin: 0;
+}
+.top-navbar{
+    width: 100%;
+    background-image: url(./zdj/menu-tlo.jpg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0px 0px 20px 4px #000000;   
+    margin-bottom: 20px;
+    height: 6%;
+}
+.menu{
+    margin-top: 20px;
+}
+.nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 10px;
+}
+.wyloguj{
+    padding: 1rem 4rem;
+    list-style: none;
+    font-family: 'Quicksand', sans-serif;
+    font-size:20px;
+    color: white;
+}
+
+.nav > li{
+    padding: 1rem 4rem 1rem 4rem;
+    list-style: none;
+    font-family: 'Quicksand', sans-serif;
+    font-size:20px;
+    color: white;
+}
+.nav > li:hover{
+    cursor: pointer;
+    background-color: rgba(255, 255, 255, 0.452);
+    transition: 0.5s;
+
+}
+.wyloguj:hover{
+    cursor: pointer;
+    background-color: rgba(255, 255, 255, 0.452);
+    transition: 0.5s;
+}
+.ranking_box{
+    margin-top: 3%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+table {
+    max-width: 100%;
+    background: rgba(34, 34, 34, 0.801);
+    color: white;
+    box-shadow: 0px 0px 20px 4px #000000; 
+}
+  
+th,td {
+    text-align: left;
+    padding: 0.5em 1em;
+    font-family: 'Quicksand', sans-serif;
+}
+.name{
+    padding: 0 15em;
+}
+
+.login-submit {     
+  border: 1px solid white;
+  background: transparent;
+  color: white;
+  display: inline-flex;
+  justify-content: space-between;
+  margin: 1rem auto;
+  margin-left: 1rem;
+  min-width: 1px;
+  padding: 0.5rem 2rem 0.5rem 2rem;
+  transition: 250ms background ease-in;
+}
+.login-username{
+    background: transparent;
+    border: 0px;
+    border-bottom: 1px solid white;
+    color: white;
+    padding: 0.5rem 1rem 0.5rem 1rem;
+  }
+.sign-in{
+    background: red;
+    border: 1px solid rgb(255, 0, 0);
+    margin-left: 3.5rem;
+}
+.login-submit:hover, .login-submit:focus {
+    background: white;
+    color: black;
+    transition: 250ms background ease-in;
+}
+
