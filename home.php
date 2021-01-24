@@ -23,8 +23,10 @@ require_once "./redis_server.php";
 		<ul class="nav">
 			<a href="./home.php"class="wyloguj"><li>Wioska <?php echo $_SESSION['login']?></li></a>
 			<li>Wiadomosci</li>
-			<li>Budowa</li>
+
+			<li><a href="./budowa.php">Budowa</a></li>
 			<a href="./ranking_page.php"><li class="wyloguj">Ranking</li></a>
+
 			<li>Profil</li>
 			<a href="./login_page.php"><li class="wyloguj">Wyloguj</li></a>
 		</ul>

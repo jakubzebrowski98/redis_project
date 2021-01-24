@@ -89,6 +89,15 @@ body {
     transition: 0.5s;
 }
 
+.nav > li > a,
+.nav > li > a:link,
+.nav > li > a:visited,
+.nav > li > a:hover,
+.nav > li > a:active{
+    color: #fff;
+    text-decoration: none;
+}
+
 .game{
     display: flex;
     justify-content: flex-start;
