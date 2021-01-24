@@ -14,6 +14,7 @@ require_once "./redis_server.php";
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" href="home1.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
+	<script type="text/javascript" src="home.js"></script>
     <link href="https://fonts.googleapis.com/css2?family=Quicksand&display=swap" rel="stylesheet">
 	<title>Document</title>
 </head>
@@ -39,6 +40,7 @@ require_once "./redis_server.php";
 				</ul>
 			</div> 
 			<div class="kategoria">
+				<span class="godzina"></span> 
 				<span class="tytul-kategori">Jednostki</span> 
 				<ul class="surowce">
 					<?php 
