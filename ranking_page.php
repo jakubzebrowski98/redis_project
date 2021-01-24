@@ -64,7 +64,7 @@
                 }
             }else{
                 $ktory = $redis -> ZREVRANK("plemiona:ranking",$szukany_gracz);
-                if($ktory < 4){$g = 0;$max = 10;}else{$g = $ktory -5;}
+                if($ktory <= 4){$g = 0;$max = 10;}else{$g = $ktory -5;}
                 if($ktory+5 > $ile){$max = $ile;}else{$max = $ktory+5;}
                 for($z = $g;$z < $max;$z++){
                     $name = $redis -> ZREVRANGE("plemiona:ranking",$z,$z)[0];
