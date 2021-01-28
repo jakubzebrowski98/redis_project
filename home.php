@@ -1,20 +1,31 @@
 <?php
-require_once "./redis_server.php";
 	session_start();
+require_once "./redis_server.php";
+
 	$login = $_SESSION['login'];
 	$drewno = $redis -> hget("$login:surowce",'drewno');
 	$kamien = $redis -> hget("$login:surowce",'kamien');
 	$zelazo = $redis -> hget("$login:surowce",'zelazo');
+	$time = $redis -> time()[0];
+
 ?>
+
 
 <!DOCTYPE html>
 <html lang="en">
 <head>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script src="https://code.jquery.com/ui/1.12.0/jquery-ui.js"></script>
+	<script type="text/javascript">
+	var autoLoad = setInterval(function(){
+		$("#Update").load('zwieksz.php');
+
+	},999);
+</script>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" href="home1.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
-	<script type="text/javascript" src="home.js"></script>
     <link href="https://fonts.googleapis.com/css2?family=Quicksand&display=swap" rel="stylesheet">
 	<title>Document</title>
 </head>
@@ -35,14 +46,12 @@ require_once "./redis_server.php";
 		<div class="left-bar">
 			<div class="kategoria">
 				<span class="tytul-kategori">Surowce</span> 
-				<ul class="surowce">
-					<li><img src="./zdj/drewno.png" alt="">Drewno <span><?php echo $drewno;?></span></li>	
-					<li><img src="./zdj/kamien.png" alt="">Kamień <span><?php echo $kamien;?></span></li>
-					<li><img src="./zdj/zelazo.png" alt="">Żelazo <span><?php echo $zelazo;?></span></li>
+				<ul class="surowce" id= "Update">
+
 				</ul>
 			</div> 
 			<div class="kategoria">
-				<span class="godzina"></span> 
+				<span class="godzina"><?php echo $time;?></span> 
 				<span class="tytul-kategori">Jednostki</span> 
 				<ul class="surowce">
 					<?php 
