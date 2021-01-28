@@ -17,7 +17,7 @@
         }
         $drewno = intval($redis -> hget("hh:surowce",'drewno'));
         $kamien = intval($redis -> hget("hh:surowce",'kamien'));
-        $zelazo = intval($redis -> hget("hh:surowce",'zelazo'));
+        $zelazo = intval($redis -> hget("hh:surowce",'zelazo'))  ;
 
     echo<<<HERE
             <li><img src="./zdj/drewno.png" alt="">Drewno <span id="Update">$drewno</span></li>	
