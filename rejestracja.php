@@ -12,7 +12,7 @@
         if($is_login == 0){
             $redis -> SADD('username', $login);
             $redis -> HMSET("$login:dane",'username',$login,'email',$email,'password',$password,'punkty',0);
-            $redis -> HMSET("$login:surowce",'drewno',200,'kamien',200,'zelazo',200);
+            $redis -> HMSET("$login:surowce",'drewno',200.0,'kamien',200.0,'zelazo',200.0);
             $redis -> HMSET("$login:jednostki",'miecznik',10,'pikinier',10,'zwiadowca',0,'szlachcic',0);
             $redis -> HMSET("$login:budynki",'ratusz',1,'tartak',1,'kamieniolom',1,'huta',1,'mur',0,'koszary',0,'spichlerz',0, 'zagroda', 1);
             $redis -> HMSET("$login:wymagania_ratusz", 'nazwa', 'ratusz', 'drewno',80,'kamien',150,'zelazo',100,'ludnosc',10,'czas', 3);

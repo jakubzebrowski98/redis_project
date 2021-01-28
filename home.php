@@ -1,15 +1,27 @@
 <?php
-require_once "./redis_server.php";
 	session_start();
+require_once "./redis_server.php";
+
 	$login = $_SESSION['login'];
 	$drewno = $redis -> hget("$login:surowce",'drewno');
 	$kamien = $redis -> hget("$login:surowce",'kamien');
 	$zelazo = $redis -> hget("$login:surowce",'zelazo');
+	$time = $redis -> time()[0];
+
 ?>
+
 
 <!DOCTYPE html>
 <html lang="en">
 <head>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script src="https://code.jquery.com/ui/1.12.0/jquery-ui.js"></script>
+	<script type="text/javascript">
+	var autoLoad = setInterval(function(){
+		$("#Update").load('zwieksz.php');
+
+	},999);
+</script>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" href="home1.css">
@@ -21,12 +33,8 @@ require_once "./redis_server.php";
 	<div class="top-navbar">
 		<ul class="nav">
 			<a href="./home.php"class="wyloguj"><li>Wioska <?php echo $_SESSION['login']?></li></a>
-			<li>Wiadomosci</li>
-
 			<li><a href="./budowa.php">Budowa</a></li>
 			<a href="./ranking_page.php"><li class="wyloguj">Ranking</li></a>
-
-			<li>Profil</li>
 			<a href="./login_page.php"><li class="wyloguj">Wyloguj</li></a>
 		</ul>
 	</div>
@@ -34,10 +42,8 @@ require_once "./redis_server.php";
 		<div class="left-bar">
 			<div class="kategoria">
 				<span class="tytul-kategori">Surowce</span> 
-				<ul class="surowce">
-					<li><img src="./zdj/drewno.png" alt="">Drewno <span><?php echo $drewno;?></span></li>	
-					<li><img src="./zdj/kamien.png" alt="">Kamień <span><?php echo $kamien;?></span></li>
-					<li><img src="./zdj/zelazo.png" alt="">Żelazo <span><?php echo $zelazo;?></span></li>
+				<ul class="surowce" id= "Update">
+
 				</ul>
 			</div> 
 			<div class="kategoria">
