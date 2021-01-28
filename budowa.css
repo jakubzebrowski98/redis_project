@@ -8,6 +8,14 @@
 }
 
 .przycisk_rozbuduj{
-    order: 2;
-    display: inline-block;
+    border: 1px solid white;
+    background: transparent;
+    color: white;
+    display: inline-flex;
+    justify-content: space-between;
+    margin: 1rem auto;
+    margin-left: 1rem;
+    min-width: 1px;
+    padding: 0.5rem 2rem 0.5rem 2rem;
+    transition: 250ms background ease-in;
 }
