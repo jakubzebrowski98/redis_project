@@ -33,12 +33,8 @@ require_once "./redis_server.php";
 	<div class="top-navbar">
 		<ul class="nav">
 			<a href="./home.php"class="wyloguj"><li>Wioska <?php echo $_SESSION['login']?></li></a>
-			<li>Wiadomosci</li>
-
 			<li><a href="./budowa.php">Budowa</a></li>
 			<a href="./ranking_page.php"><li class="wyloguj">Ranking</li></a>
-
-			<li>Profil</li>
 			<a href="./login_page.php"><li class="wyloguj">Wyloguj</li></a>
 		</ul>
 	</div>
@@ -51,7 +47,6 @@ require_once "./redis_server.php";
 				</ul>
 			</div> 
 			<div class="kategoria">
-				<span class="godzina"><?php echo $time;?></span> 
 				<span class="tytul-kategori">Jednostki</span> 
 				<ul class="surowce">
 					<?php 
