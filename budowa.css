@@ -1,7 +1,13 @@
 #building_wrapper{
     padding: 30px;
+    margin: 40px auto;
     background-image: url('./zdj/old-paper.jpg');
-    width: 60vw;
+    width: 40vw;
     background-repeat: none;
-    background-size: 100%;
+    background-size: cover;
+}
+
+.przycisk_rozbuduj{
+    order: 2;
+    display: inline-block;
 }
