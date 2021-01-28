@@ -8,9 +8,9 @@
             $p_huta= $redis -> HGET("$login:budynki",'huta');
             $p_tartak = $redis -> HGET("$login:budynki",'tartak');
     
-            $o_ile_kamieniolom = $p_kamieniolom * 1.2;
-            $o_ile_huta = $p_huta * 1.2;
-            $o_ile_tartak = $p_tartak * 1.2;
+            $o_ile_kamieniolom = $p_kamieniolom * 1;
+            $o_ile_huta = $p_huta * 1;
+            $o_ile_tartak = $p_tartak * 1;
             $redis -> HINCRBYFLOAT("$login:surowce",'kamien',$o_ile_kamieniolom);
             $redis -> HINCRBYFLOAT("$login:surowce",'zelazo',$o_ile_huta);
             $redis -> HINCRBYFLOAT("$login:surowce",'drewno',$o_ile_tartak);
