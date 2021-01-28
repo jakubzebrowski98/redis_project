@@ -1,23 +1,24 @@
 <?php
     require_once "./redis_server.php";
-
+	session_start();
+	$login = $_SESSION['login'];
         $minuta = date('s');
         if($minuta % 10 == 0){
-            $p_kamieniolom = $redis -> HGET("hh:budynki",'kamieniolom');
-            $p_huta= $redis -> HGET("hh:budynki",'huta');
-            $p_tartak = $redis -> HGET("hh:budynki",'tartak');
+            $p_kamieniolom = $redis -> HGET("$login:budynki",'kamieniolom');
+            $p_huta= $redis -> HGET("$login:budynki",'huta');
+            $p_tartak = $redis -> HGET("$login:budynki",'tartak');
     
             $o_ile_kamieniolom = $p_kamieniolom * 1.2;
             $o_ile_huta = $p_huta * 1.2;
             $o_ile_tartak = $p_tartak * 1.2;
-            $redis -> HINCRBYFLOAT("hh:surowce",'kamien',$o_ile_kamieniolom);
-            $redis -> HINCRBYFLOAT("hh:surowce",'zelazo',$o_ile_huta);
-            $redis -> HINCRBYFLOAT("hh:surowce",'drewno',$o_ile_tartak);
+            $redis -> HINCRBYFLOAT("$login:surowce",'kamien',$o_ile_kamieniolom);
+            $redis -> HINCRBYFLOAT("$login:surowce",'zelazo',$o_ile_huta);
+            $redis -> HINCRBYFLOAT("$login:surowce",'drewno',$o_ile_tartak);
             
         }
-        $drewno = intval($redis -> hget("hh:surowce",'drewno'));
-        $kamien = intval($redis -> hget("hh:surowce",'kamien'));
-        $zelazo = intval($redis -> hget("hh:surowce",'zelazo'))  ;
+        $drewno = intval($redis -> hget("$login:surowce",'drewno'));
+        $kamien = intval($redis -> hget("$login:surowce",'kamien'));
+        $zelazo = intval($redis -> hget("$login:surowce",'zelazo'));
 
     echo<<<HERE
             <li><img src="./zdj/drewno.png" alt="">Drewno <span id="Update">$drewno</span></li>	
